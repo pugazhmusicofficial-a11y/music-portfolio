@@ -43,7 +43,7 @@ export default function Discography() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-gray-900 border border-gray-900">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[1px] bg-transparent md:bg-gray-900 border-none md:border md:border-gray-900">
           {tracks.map((track, idx) => (
             <motion.div 
               key={idx}
@@ -51,13 +51,13 @@ export default function Discography() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-[#0d0d0b] p-12 group relative overflow-hidden flex flex-col justify-between aspect-square hover:bg-[#121210] transition-all duration-500 cursor-pointer"
+              className="bg-[#0d0d0b] p-8 md:p-12 group relative overflow-hidden flex flex-col justify-between min-h-[400px] md:aspect-square hover:bg-[#121210] transition-all duration-500 cursor-pointer border border-white/5 md:border-none"
             >
               <div className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               
               <div className="text-[10px] text-gray-600 tracking-[0.2em]">{track.num} / FEATURED</div>
               
-              <div className="relative w-32 h-32 mx-auto my-8">
+              <div className="relative w-24 h-24 md:w-32 md:h-32 mx-auto my-6 md:my-8">
                 {/* Vinyl Effect */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-black to-gray-800 shadow-2xl group-hover:animate-spin duration-[5000ms] linear" />
                 <div className="absolute inset-2 rounded-full border border-white/5" />
@@ -67,13 +67,13 @@ export default function Discography() {
               </div>
 
               <div className="text-center">
-                <h3 className="font-display text-3xl uppercase mb-1">{track.name}</h3>
-                <p className="text-[10px] text-gray-500 uppercase tracking-widest mb-6">{track.feat}</p>
+                <h3 className="font-display text-2xl md:text-3xl uppercase mb-1 text-white">{track.name}</h3>
+                <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest mb-6 px-4">{track.feat}</p>
                 
                 <a 
                   href={track.link} 
                   target="_blank" 
-                  className={`inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold px-4 py-2 rounded-full border transition-all duration-300 ${
+                  className={`inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold px-6 py-3 rounded-full border transition-all duration-300 ${
                     track.platform === 'YouTube' 
                       ? 'border-red-900/30 text-red-500 hover:bg-red-500 hover:text-white' 
                       : 'border-green-900/30 text-green-500 hover:bg-green-500 hover:text-white'
