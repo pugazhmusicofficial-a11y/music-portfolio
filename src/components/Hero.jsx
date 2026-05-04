@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ y: '100%', rotateZ: 5 }}
             animate={{ y: 0, rotateZ: 0 }}
             transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1], delay: 0.4 }}
-            className="font-display text-[15vw] leading-[0.8] tracking-tighter text-white uppercase drop-shadow-2xl mix-blend-overlay pr-4"
+            className="font-display text-[18vw] md:text-[15vw] leading-[0.8] tracking-tighter text-white uppercase drop-shadow-2xl mix-blend-overlay pr-4"
           >
             PRAGATHISH
           </motion.h1>
@@ -69,7 +69,7 @@ export default function Hero() {
             initial={{ y: '100%', rotateZ: -5 }}
             animate={{ y: 0, rotateZ: 0 }}
             transition={{ duration: 1.2, ease: [0.33, 1, 0.68, 1], delay: 0.5 }}
-            className="font-display text-[15vw] leading-[0.8] tracking-tighter text-transparent uppercase stroke-text pr-10"
+            className="font-display text-[18vw] md:text-[15vw] leading-[0.8] tracking-tighter text-transparent uppercase stroke-text pr-10"
             style={{ WebkitTextStroke: '2px rgba(255,255,255,0.8)' }}
           >
             PUGAZH

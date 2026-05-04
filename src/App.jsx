@@ -34,16 +34,16 @@ function App() {
       <CustomCursor />
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference">
-        <div className="font-display text-2xl tracking-widest text-white select-none">PRAGATHISH</div>
+      <nav className="fixed top-0 left-0 w-full p-4 md:p-8 flex justify-between items-center z-50 bg-brand-dark/40 backdrop-blur-xl border-b border-white/5">
+        <div className="font-display text-xl md:text-2xl tracking-widest text-white select-none">PRAGATHISH</div>
         <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.2em] text-gray-400">
           <a href="#about" className="hover:text-brand-yellow transition-colors cursor-pointer">About</a>
           <a href="#services" className="hover:text-brand-yellow transition-colors cursor-pointer">Services</a>
           <a href="#videos" className="hover:text-brand-yellow transition-colors cursor-pointer">Videos</a>
           <a href="#music" className="hover:text-brand-yellow transition-colors cursor-pointer">Discography</a>
         </div>
-        <a href="https://wa.me/919566128134" target="_blank" className="text-xs uppercase tracking-[0.2em] text-white hover:text-brand-yellow transition-colors font-bold magnetic underline underline-offset-8">
-          Book a Session
+        <a href="https://wa.me/919566128134" target="_blank" className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-white hover:text-brand-yellow transition-colors font-bold magnetic underline underline-offset-8">
+          Book Now
         </a>
       </nav>
 
