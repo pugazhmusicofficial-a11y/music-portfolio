@@ -71,17 +71,17 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60" />
               <div className="absolute inset-0 border-[1px] border-brand-yellow/30 -m-4 pointer-events-none" />
-              <div className="absolute bottom-6 left-6 right-6 p-8 bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold">✓</div>
-                  <h4 className="font-display text-2xl text-white uppercase tracking-wider">Verified Artist</h4>
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 p-4 md:p-8 bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
+                <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                  <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xs">✓</div>
+                  <h4 className="font-display text-lg md:text-2xl text-white uppercase tracking-wider">Verified Artist</h4>
                 </div>
-                <div className="space-y-3 text-sm text-gray-300">
-                  <div className="flex items-center gap-3 hover:text-brand-yellow transition-colors cursor-pointer">
-                    <span className="text-brand-yellow">📱</span> +91 95661 28134
+                <div className="space-y-2 md:space-y-3 text-[10px] md:text-sm text-gray-300">
+                  <div className="flex items-center gap-2 md:gap-3 hover:text-brand-yellow transition-colors cursor-pointer">
+                    <span className="text-brand-yellow text-base">📱</span> +91 95661 28134
                   </div>
-                  <div className="flex items-center gap-3 hover:text-brand-yellow transition-colors cursor-pointer">
-                    <span className="text-brand-yellow">📧</span> pugazhmusicofficial@gmail.com
+                  <div className="flex items-center gap-2 md:gap-3 hover:text-brand-yellow transition-colors cursor-pointer break-all">
+                    <span className="text-brand-yellow text-base">📧</span> pugazhmusicofficial@gmail.com
                   </div>
                 </div>
               </div>

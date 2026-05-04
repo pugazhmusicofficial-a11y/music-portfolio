@@ -42,7 +42,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Email Me</div>
-                  <div className="text-xl font-medium text-white group-hover:text-brand-yellow transition-colors">pugazhmusicofficial@gmail.com</div>
+                  <div className="text-base md:text-xl font-medium text-white group-hover:text-brand-yellow transition-colors break-all md:break-normal">pugazhmusicofficial@gmail.com</div>
                 </div>
               </a>
             </div>
