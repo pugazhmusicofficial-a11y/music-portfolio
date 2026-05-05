@@ -43,7 +43,13 @@ export default function VideoShowcase() {
 
         <motion.div style={{ x }} className="flex gap-10 px-10 w-max">
           {videos.map((vid, idx) => (
-            <div key={idx} className="w-[80vw] md:w-[45vw] group relative cursor-pointer">
+            <a 
+              key={idx} 
+              href={`https://www.youtube.com/watch?v=${vid.id}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-[80vw] md:w-[45vw] group relative cursor-pointer block"
+            >
               <div className="relative w-full pb-[56.25%] overflow-hidden bg-black border border-gray-800">
                 <img 
                   src={`https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`} 
@@ -62,7 +68,7 @@ export default function VideoShowcase() {
                 <span className="text-xs text-brand-yellow tracking-widest uppercase mb-2">{vid.tag}</span>
                 <h3 className="font-display text-4xl uppercase">{vid.title}</h3>
               </div>
-            </div>
+            </a>
           ))}
         </motion.div>
       </div>

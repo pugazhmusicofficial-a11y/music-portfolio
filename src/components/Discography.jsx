@@ -45,13 +45,16 @@ export default function Discography() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[1px] bg-transparent md:bg-gray-900 border-none md:border md:border-gray-900">
           {tracks.map((track, idx) => (
-            <motion.div 
+            <motion.a 
               key={idx}
+              href={track.link}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-[#0d0d0b] p-8 md:p-12 group relative overflow-hidden flex flex-col justify-between min-h-[400px] md:aspect-square hover:bg-[#121210] transition-all duration-500 cursor-pointer border border-white/5 md:border-none"
+              className="bg-[#0d0d0b] p-8 md:p-12 group relative overflow-hidden flex flex-col justify-between min-h-[400px] md:aspect-square hover:bg-[#121210] transition-all duration-500 cursor-pointer border border-white/5 md:border-none block"
             >
               <div className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-yellow scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               
@@ -70,20 +73,16 @@ export default function Discography() {
                 <h3 className="font-display text-2xl md:text-3xl uppercase mb-1 text-white">{track.name}</h3>
                 <p className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest mb-6 px-4">{track.feat}</p>
                 
-                <a 
-                  href={track.link} 
-                  target="_blank" 
-                  className={`inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold px-6 py-3 rounded-full border transition-all duration-300 ${
-                    track.platform === 'YouTube' 
-                      ? 'border-red-900/30 text-red-500 hover:bg-red-500 hover:text-white' 
-                      : 'border-green-900/30 text-green-500 hover:bg-green-500 hover:text-white'
-                  }`}
-                >
+                <div className={`inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold px-6 py-3 rounded-full border transition-all duration-300 ${
+                  track.platform === 'YouTube' 
+                    ? 'border-red-900/30 text-red-500 group-hover:bg-red-500 group-hover:text-white' 
+                    : 'border-green-900/30 text-green-500 group-hover:bg-green-500 group-hover:text-white'
+                }`}>
                   {track.platform === 'YouTube' ? <Play size={14} /> : <Music2 size={14} />}
                   Listen Now
-                </a>
+                </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
